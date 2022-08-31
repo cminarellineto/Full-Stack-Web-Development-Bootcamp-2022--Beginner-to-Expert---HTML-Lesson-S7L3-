@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+nav .right-corner {
+  display: flex;
+  font-weight: bold;
+  font-size: 2em;
+  vertical-align: center;
+}
+nav .right-corner i {
+  color: #FF0000;
+}
+nav .search {
+  display: inline-flex;
+  align-items: center;
+  border: solid 0.1rem #c2c2c2;
+  border-radius: 0.2rem;
+  padding: 0 0.8rem;
+  transition: 0.2s cubic-bezier(0.23, 0.8, 1, 0.55);
+}
+nav .search:focus-within {
+  border: solid 0.1rem #FF0000;
+}
+nav .search:focus-within .icon {
+  color: #000;
+}
+nav .search .icon {
+  border-left: solid 0.1rem #c2c2c2;
+  padding: 0.5rem 0.1rem 0.5rem 0.8rem;
+  color: #c2c2c2;
+  transition: 0.2s cubic-bezier(0.23, 0.8, 1, 0.55);
+}
+nav .search input {
+  width: 20rem;
+  border: none;
+}
+nav .search input:focus {
+  outline: none;
+}
+nav .left-corner {
+  display: flex;
+  align-items: center;
+  transform: scale(150%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+nav .left-corner i {
+  padding: 0.3rem;
+  margin: 0.1rem;
+  color: #c2c2c2;
+}
+nav .left-corner i:hover {
+  color: #929292;
+}
+nav .left-corner div {
+  padding: 0.3rem;
+  margin: 0.2rem 2rem 0.2rem 0;
+  width: 1.2rem;
+  color: #fff;
+  background: #00ff00;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+aside {
+  display: flex;
+  width: 20%;
+  background: #fff;
+  flex-direction: column;
+  align-items: space-around;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: start;
+}
+aside li {
+  list-style-type: none;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+}
+aside li:hover {
+  background: #e2e2e2;
+  font-weight: bold;
+}
+aside li i {
+  margin-right: 0.5rem;
+}
+aside .subscription {
+  text-align: center;
+  margin-top: 1rem;
+}
+aside .subscription .message {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: start;
+}
+aside .subscription .message i {
+  transform: scale(300%);
+  padding: 2rem;
+  color: #FF0000;
+}
+aside .subscription .message span {
+  font-weight: bold;
+  margin: 0 0.5rem;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.flex-container .grid-container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: auto auto auto auto;
+  gap: 5px;
+  background: #c2c2c2;
+  margin-top: 0.5rem;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.1647058824);
+}
+.flex-container .grid-container .grid-item {
+  padding: 0.5rem 1rem;
+}
+.flex-container .grid-container .grid-item iframe {
+  width: 100%;
+  height: 20%;
+}/*# sourceMappingURL=style.css.map */

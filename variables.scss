@@ -1,0 +1,13 @@
+$color: #FF0000;
+
+@mixin list-button {
+    list-style-type: none;
+    padding: .5rem;
+    margin-top: .5rem;
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+        background: #e2e2e2;
+        font-weight: bold;
+    }
+}

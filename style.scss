@@ -1,0 +1,137 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  .right-corner {
+    display: flex;
+    font-weight: bold;
+    font-size: 2em;
+    vertical-align: center;
+    i {
+        color: $color;
+    }
+  }
+  .search {
+    display: inline-flex;
+    align-items: center;
+    border: solid 0.1rem #c2c2c2;
+    border-radius: 0.2rem;
+    padding: 0 0.8rem;
+    transition: 0.2s cubic-bezier(0.23, 0.8, 1, 0.55);
+    &:focus-within {
+      border: solid 0.1rem $color;
+      .icon {
+        color: #000;
+      }
+    }
+    .icon {
+      border-left: solid 0.1rem #c2c2c2;
+      padding: 0.5rem 0.1rem 0.5rem 0.8rem;
+      color: #c2c2c2;
+      transition: 0.2s cubic-bezier(0.23, 0.8, 1, 0.55);
+    }
+    input {
+      width: 20rem;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .left-corner {
+    display: flex;
+    align-items: center;
+    transform: scale(150%);
+    user-select: none;
+    cursor: pointer;
+    i {
+      padding: 0.3rem;
+      margin: 0.1rem;
+      color: #c2c2c2;
+      &:hover {
+        color: #929292;
+      }
+    }
+    div {
+      padding: 0.3rem;
+      margin: 0.2rem 2rem .2rem 0;
+      width: 1.2rem;
+      color: #fff;
+      background: #00ff00;
+      border-radius: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+aside {
+  display: flex;
+  width: 20%;
+  background: #fff;
+  flex-direction: column;
+  align-items: space-around;
+  user-select: none;
+  text-align: start;
+  li {
+    @include list-button;
+    i {
+      margin-right: 0.5rem;
+    }
+  }
+  .subscription {
+    text-align: center;
+    margin-top: 1rem;
+    .message {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      text-align: start;
+      i {
+        transform: scale(300%);
+        padding: 2rem;
+        color: $color;
+      }
+      span {
+        font-weight: bold;
+        margin: 0 0.5rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.flex-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+
+  .grid-container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: auto auto auto auto;
+    gap: 5px;
+    background: #c2c2c2;
+    margin-top: 0.5rem;
+    box-shadow: inset 5px 5px 5px #0000002a;
+    .grid-item {
+      padding: 0.5rem 1rem;
+      iframe {
+        width: 100%;
+        height: 20%;
+      }
+    }
+  }
+}
